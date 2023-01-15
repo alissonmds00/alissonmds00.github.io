@@ -1,0 +1,79 @@
+:root {
+  --font-family: "Fira Sans", sans-serif;
+  --font-family: "Montserrat", sans-serif;
+  --font-family: "Montserrat Alternates", sans-serif;
+}
+
+ul, a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.desc {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    margin: 0px auto;
+    max-width: 1000px;
+    gap: 40px;
+}
+
+.desc p {
+    grid-column: 2;
+}
+
+.desc div {
+    align-self: center;
+}
+
+.fotoperfil {
+    max-width: 360px;
+    height: 100%;
+    object-fit: contain;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+    align-items: baseline;
+}
+
+article p {
+    max-width: 60ch;
+}
+
+.sobre {
+    grid-column: 2 / -1;
+}
+
+article span {
+    text-align: end;
+}
+
+.stacks:not(.stacks:last-child(), .stacks:first-child()) {
+    margin-right: 50px;
+}
