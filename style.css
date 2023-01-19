@@ -165,8 +165,8 @@ article span {
 /* PARTE SUPERIOR */
 
 section {
-  margin-top: 40px;
   background: #292929;
+  padding: 50px 0px;
 }
 
 .grid {
@@ -318,5 +318,47 @@ h3 > span {
 /* Parte de baixo */
 
 footer {
+  position: relative;
   background-color: #141414;
+  color: #fff;
+}
+
+footer::before {
+    content: url(./img/detalhe.svg);
+    position: absolute;
+    top: -60px;
+    left: 300px;
+}
+
+.mais {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1000px;
+  gap: 100px 200px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 0px;
+}
+
+.mais p {
+  max-width: minmax(60ch auto);
+  color: #cccccc;
+}
+
+.mais li {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 40px;
+  font-family: "Fira Sans", sans-serif;
+  color: #fff;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.mais span {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 32px;
+  color: #8f8f8f;
 }
