@@ -16,10 +16,6 @@ section {
     color: #cccccc;
   }
   
-  .conteudo {
-    max-width: minmax(auto, 60ch);
-  }
-  
   .conteudo > div > p {
     color: #b8b8b8;
   }
