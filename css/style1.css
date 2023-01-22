@@ -1,135 +1,160 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-  }
-  
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
 .navbar li {
-  transition: .3s;
+  transition: 0.3s;
   border: 3px solid transparent;
   padding: 5px;
 }
 
-  .navbar li:hover {
-    border-radius: 4px;
-    border: 3px solid #800add;
-  }
-  
-  .moldura {
+.navbar li:hover {
+  border-radius: 4px;
+  border: 3px solid #800add;
+}
+
+.moldura {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.moldura > img {
+  max-height: 50px;
+  border: 1px #800add solid;
+  border-radius: 50%;
+}
+
+.moldura > p {
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+}
+
+.desc {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  margin: 0px auto;
+  max-width: 1200px;
+  gap: 0px 100px;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.desc h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+
+.desc > div > h1 {
+  position: relative;
+  font-size: 4.5rem;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+}
+
+.desc > div > h1::before {
+  position: absolute;
+  content: url(../img/detalhe.svg);
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  top: -20px;
+  left: -50px;
+}
+
+.desc p {
+  grid-column: 2;
+}
+
+.desc div {
+  align-self: center;
+}
+
+.projeto {
+  position: relative;
+}
+
+.projeto::before {
+  content: url(../img/naosei.svg);
+  position: absolute;
+  left: -10px;
+  top: 20px;
+}
+
+.projeto p {
+  margin-top: 0px;
+}
+
+.stacks > ul > li ,
+.projeto > p {
+  font-size: 1.25rem;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.fotoperfil {
+  max-width: 360px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stacks > ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 0 20px;
+  flex-wrap: wrap;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  align-items: baseline;
+  padding-bottom: 50px;
+}
+
+article p {
+  max-width: 60ch;
+}
+
+.sobre {
+  grid-column: 2 / -1;
+}
+
+article span {
+  text-align: end;
+}
+
+.stacks {
+  max-width: 30ch;
+}
+.stacks > span {
+  margin-right: 30px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+  nav {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
   }
-  
-  .moldura > img {
-    max-height: 50px;
-    border: 1px #800add solid;
-    border-radius: 50%;
+  header {
+    justify-content: center;
   }
-  
-  .moldura > p {
-    font-size: 20px;
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 700;
-  }
-  
-  .desc {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    margin: 0px auto;
-    max-width: 1200px;
-    gap: 0px 100px;
-  }
-  
-  .desc > div > h1 {
-    position: relative;
-    font-size: 4.5rem;
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 700;
-  }
-  
-  .desc > div > h1::before {
-    position: absolute;
-    content: url(./img/detalhe.svg);
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-    top: -20px;
-    left: -50px;
-  }
-  
-  .desc p {
-    grid-column: 2;
-  }
-  
-  .desc div {
-    align-self: center;
-  }
-  
-  .projeto {
-    position: relative;
-  }
-  
-  .projeto::before {
-    content: url(./img/naosei.svg);
-    position: absolute;
-    left: -15px;
-    top: 35px;
-  }
-  
-  .stacks > div > span,
-  .projeto > p {
-    font-size: 1.25rem;
-    font-family: "Fira Sans", sans-serif;
-  }
-  
-  .fotoperfil {
-    max-width: 360px;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .stacks > div {
-    display: flex;
-    justify-content: space-around;
-    gap: 0 20px;
-    flex-wrap: wrap;
-  }
- 
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 60px;
-    align-items: baseline;
-    padding-bottom: 50px;
-  }
-  
-  article p {
-    max-width: 60ch;
-  }
-  
-  .sobre {
-    grid-column: 2 / -1;
-  }
-  
-  article span {
-    text-align: end;
-  }
-  
-  .stacks {
-    max-width: 30ch;
-  }
-  .stacks > span {
-    margin-right: 30px;
-  }
-  
+}

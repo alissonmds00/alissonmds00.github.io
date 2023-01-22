@@ -29,6 +29,7 @@ section {
     justify-content: space-between;
     align-items: center;
   }
+
   
   .formacao2 {
     color: #141414;
@@ -53,11 +54,19 @@ section {
     padding: 20px;
     background: #141414;
   }
+
+  .formacoes > div > h3 {
+    padding-bottom: 20px;
+  }
+
+  .formacoes > div > h4 {
+    padding-bottom: 40px;
+  }
   
   .formacoes > div::before {
     position: absolute;
-    content: url(./img/naosei.svg);
-    top: 40%;
+    content: url(../img/naosei.svg);
+    top: 33%;
     left: -3px;
   }
   
@@ -98,27 +107,41 @@ section {
   .cursos {
     align-items: center;
   }
-  
+
   .titulo > h2 {
     position: relative;
+    padding-bottom: 40px;
   }
-  
+
   .titulo > h2::before {
     position: absolute;
     left: -30px;
-    content: url(./img/cursos.svg);
+    content: url(../img/cursos.svg);
+  }
+  
+  .cursos div:not(.titulo) {
+    padding-bottom: 20px;
+  }
+
+  .cursos div:last-child {
+    padding-bottom: 40px;
   }
   
   .idiomas > h2 {
     position: relative;
+    padding-bottom: 50px;
   }
   
   .idiomas > h2::before {
     position: absolute;
     left: -30px;
-    content: url(./img/idiomas.svg);
+    content: url(../img/idiomas.svg);
   }
-  
+
+  .idiomas div {
+    padding-bottom: 20px;
+  }
+
   .titulo > h2,
   .idiomas > h2 {
     font-weight: 700;

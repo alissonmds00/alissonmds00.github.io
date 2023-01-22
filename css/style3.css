@@ -5,10 +5,10 @@ footer {
   }
   
   footer::before {
-      content: url(./img/detalhe.svg);
+      content: url(../img/detalhe.svg);
       position: absolute;
       top: -60px;
-      left: 300px;
+      left: 200px;
   }
   
   .mais {
