@@ -43,7 +43,6 @@ nav {
 .desc {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto;
   margin: 0px auto;
   max-width: 1200px;
   gap: 0px 100px;
@@ -51,28 +50,33 @@ nav {
   align-items: center;
 }
 
+.fotoperfil {
+}
+
 .desc h1 {
   font-size: 4.5rem;
   line-height: 1.125;
   margin-bottom: 30px;
-  word-break: break-all;
 }
 
-.desc > div > h1 {
+.desc h1 {
   position: relative;
   font-size: 4.5rem;
+  line-height: 1.125;
   font-family: "Fira Sans", sans-serif;
   font-weight: 700;
 }
 
-.desc > div > h1::before {
+.desc div  h1::before {
+  content: "";
+  display: block;
   position: absolute;
-  content: url(../img/detalhe.svg);
-  height: 10px;
-  width: 10px;
+  background: url(../img/detalhe.svg), no-repeat, center;
+  height: 100px;
+  width: 130px;
   z-index: -1;
   top: -20px;
-  left: -50px;
+  left: -40px;
 }
 
 .desc p {
@@ -88,26 +92,23 @@ nav {
 }
 
 .projeto::before {
-  content: url(../img/naosei.svg);
+  content: "";
   position: absolute;
   left: -10px;
   top: 20px;
+  width: 5px;
+  height: 20px;
+  background-image: url(../img/naosei.svg);
 }
 
 .projeto p {
   margin-top: 0px;
 }
 
-.stacks > ul > li ,
+.stacks > ul > li,
 .projeto > p {
   font-size: 1.25rem;
   font-family: "Fira Sans", sans-serif;
-}
-
-.fotoperfil {
-  max-width: 360px;
-  height: 100%;
-  object-fit: contain;
 }
 
 .stacks > ul {
@@ -156,5 +157,37 @@ article span {
   }
   header {
     justify-content: center;
+  }
+  .desc h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .desc {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 0 auto;
+  }
+  .desc div  h1::before {
+    display: none;
+  }
+  .desc h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .fotoperfil {
+    display: none;
+  }
+  .desc {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+  }
+  .desc > div > h1::before {
+    background: none;
   }
 }

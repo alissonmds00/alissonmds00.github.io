@@ -18,7 +18,7 @@ footer {
     gap: 100px 200px;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    padding: 50px 0px;
+    padding: 50px 20px;
   }
   
   .mais p {

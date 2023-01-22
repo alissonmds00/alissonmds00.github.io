@@ -92,6 +92,7 @@ section {
     font-size: 18px;
     line-height: 20px;
     color: #a3a3a3;
+    align-self: flex-end;
   }
   
   .idiomas {
