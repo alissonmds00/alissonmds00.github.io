@@ -47,7 +47,7 @@
   background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
   position: absolute;
   top: 20px;
-  left: -18px;
+  left: -25px;
 }
 
 .empresa-ano {
@@ -64,6 +64,7 @@
   font-size: 1.125rem;
   line-height: 1.1;
   font-weight: bold;
+  color: #141414;
 }
 
 .empresa-texto {
